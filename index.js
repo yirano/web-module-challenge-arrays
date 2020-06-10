@@ -28,7 +28,10 @@ var originalFlavors = ["Banana Nut Fudge",
     "Rocky Road",
     "Strawberry",
     "Vanilla",
-    "Vanilla Burnt Almond"]
+    "Vanilla Burnt Almond",
+    
+    
+]
 
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
@@ -40,11 +43,15 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
+function is31Flavors(arr){
 
-    /*code here*/
-
+    if (arr.length === 31) {
+        return true
+      } else {
+        return flase
+      }
 }
+console.log(is31Flavors(originalFlavors))
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
