@@ -51,7 +51,7 @@ function is31Flavors(arr){
         return flase
       }
 }
-console.log(is31Flavors(originalFlavors))
+//console.log(is31Flavors(originalFlavors))
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -66,11 +66,14 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(arr, flav){
    for (let i = 0; i < arr.length; i++) {
-       console.log(arr.push(flav));
+    return arr.push("flav");
+    
+     
    }
 
 }
-//console.log(addFlavor(originalFlavors,"Rainbow Sherbert" ))
+//console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
+
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -88,7 +91,7 @@ function removeLastFlavor(arr){
     return arr;
 
 }
-console.log(removeLastFlavor(originalFlavors))
+//console.log(removeLastFlavor(originalFlavors))
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -99,12 +102,17 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(/*code here*/){
+function getFlavorByIndex(arr, index)
+    {
+        
+            return arr[index];
+        
+        
 
-    /*code here*/
+   
 
 }
-
+console.log(getFlavorByIndex(originalFlavors, 2))
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
 Your function should accept: 
@@ -118,10 +126,9 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
+function removeFlavorByName(arr, flav){
 
-    /*code here*/
-
+    
 }
 
 
