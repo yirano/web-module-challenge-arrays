@@ -120,20 +120,20 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(originalFlavors, flavor){
+// function removeFlavorByName(originalFlavors, flavor){
 
-    for(let i = 0; i < originalFlavors.length;){ // runs loop for the length of the array
-        if(originalFlavors[i] === flavor){         // if statement that determines if the array at index i is the conditional flavor
-            originalFlavors.splice(i,1);    //removes flavor at index
+//     for(let i = 0; i < originalFlavors.length;){ // runs loop for the length of the array
+//         if(originalFlavors[i] === flavor){         // if statement that determines if the array at index i is the conditional flavor
+//             originalFlavors.splice(i,1);    //removes flavor at index
            
-        }else{
-            i++;                //if index did not equal to flavor add 1 to i moving on to the next index
-        }
-    }
-    return console.log(originalFlavors);   //prints the index with the removed flavor
+//         }else{
+//             i++;                //if index did not equal to flavor add 1 to i moving on to the next index
+//         }
+//     }
+//     return console.log(originalFlavors);   //prints the index with the removed flavor
    
-}
-removeFlavorByName(originalFlavors,"Banana Nut Fudge");
+// }
+// removeFlavorByName(originalFlavors,"Banana Nut Fudge");
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -143,11 +143,13 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+// let originalFlavorsCopy = [];
 
-    /*code here*/
-
-}
+// function copy(originalFlavors, originalFlavorsCopy){
+//     originalFlavorsCopy = originalFlavors.slice();
+//     return originalFlavorsCopy;
+// }
+// console.log(copy(originalFlavors,originalFlavorsCopy));
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -164,12 +166,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+let filterWord = "Chocolate";
 
-    /*code here*/
-
+function filterByWord(originalFlavors, filterWord){
+    var filteredArray =[];
+    for(let i = 0; i < originalFlavors.length; i++){
+        if(originalFlavors[i].includes(filterWord)){
+        filteredArray.push(originalFlavors[i]);
+        }
+    }
+    return filteredArray;
 }
-
+console.log(filterByWord(originalFlavors, filterWord));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
