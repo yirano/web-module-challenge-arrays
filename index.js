@@ -114,9 +114,13 @@ Hint: You can use .splice() for this
 */
 
 function removeFlavorByName(arr, flav){
-
-  return arr.splice(flav);
-}
+    for ( let i = 0; i < arr.length; i++){
+        if(arr[i] === flav);{
+            arr.splice(flav, 1); 
+        }
+        return arr;
+    } 
+} 
 
 console.log(removeFlavorByName(originalFlavors,'Banana Nut Fudge'));
 
@@ -260,5 +264,5 @@ var regionalFlavors = ["Pink Bubblegum",
 function getRandomFlavors(/*code here*/){
 
     /*code here*/
-
 }
+
